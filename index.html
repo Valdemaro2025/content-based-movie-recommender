@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Content-Based Movie Recommender</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Content-Based Movie Recommender</h1>
+        <p>Select a movie you like, and we'll find similar ones for you!</p>
+        
+        <div class="controls">
+            <select id="movie-select">
+                <option value="" disabled selected>Select a movie</option>
+            </select>
+            <button id="recommend-btn" onclick="getRecommendations()">Get Recommendations</button>
+        </div>
+
+        <div id="result-box">
+            <p id="result">Please wait, loading data...</p>
+        </div>
+
+        <div class="controls profile-controls">
+            <p>Select three movies you have watched to build a profile:</p>
+            <select id="watched-1">
+                <option value="" disabled selected>Select watched movie 1</option>
+            </select>
+            <select id="watched-2">
+                <option value="" disabled selected>Select watched movie 2</option>
+            </select>
+            <select id="watched-3">
+                <option value="" disabled selected>Select watched movie 3</option>
+            </select>
+            <button id="profile-btn" onclick="getProfileRecommendations()">Get Profile Recommendations</button>
+        </div>
+
+        <div id="profile-result-box">
+            <p id="profile-result">Select three watched movies to get profile-based recommendations.</p>
+        </div>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
